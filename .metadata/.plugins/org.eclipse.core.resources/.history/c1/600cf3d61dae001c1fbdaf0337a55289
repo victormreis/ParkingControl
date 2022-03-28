@@ -1,0 +1,38 @@
+package com.example.ParkingControl.services;
+
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ParkingControl.models.ParkingSpotModel;
+import com.example.ParkingControl.repositories.ParkingSpotRepository;
+
+@Service
+public class ParkingSpotService {
+	
+	final ParkingSpotRepository parkingSpotRepository;
+	
+	public ParkingSpotService(ParkingSpotRepository parkingSpotRepository) {
+		this.parkingSpotRepository = parkingSpotRepository;
+	}
+
+	@Transactional
+	public ParkingSpotModel save(ParkingSpotModel parkingSpotModel) {
+		// TODO Auto-generated method stub
+		return parkingSpotRepository.save(parkingSpotModel);
+	}
+
+	public boolean existsByPlateCar(String plateCar) {		
+		return parkingSpotRepository.existsByPlateCar(plateCar);
+	}
+
+	public boolean existsByLicenseParkingSpotNumber(String parkingSpotNumber) {		
+		return parkingSpotRepository.existsByLicenseParkingSpotNumber(parkingSpotNumber);
+	}
+
+	public boolean existsByApartmentAndBlock(String apartment, String block) {		
+		return parkingSpotRepository.existsByApartmentAndBlock(apartment, block);
+	}
+
+}

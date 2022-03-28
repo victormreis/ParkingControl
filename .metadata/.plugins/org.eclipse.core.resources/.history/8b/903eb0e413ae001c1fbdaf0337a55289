@@ -1,0 +1,14 @@
+package com.example.ParkingControl.models;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_parkingSpot")
+public class ParkingSpotModel implements Serializable{
+	
+	
+
+}

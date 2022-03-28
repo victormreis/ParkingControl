@@ -1,0 +1,5 @@
+package com.example.ParkingControl.controllers;
+
+public class ParkingSpotController {
+
+}

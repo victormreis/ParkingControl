@@ -1,0 +1,11 @@
+package com.example.ParkingControl.repositories;
+
+import java.util.UUID;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.ParkingControl.models.ParkingSpotModel;
+
+public interface ParkingSpotRepository extends JpaRepository<ParkingSpotModel, UUID> {
+
+}

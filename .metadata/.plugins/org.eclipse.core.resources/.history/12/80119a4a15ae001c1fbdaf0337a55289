@@ -1,0 +1,5 @@
+package com.example.ParkingControl.services;
+
+public class ParkingSpotService {
+
+}

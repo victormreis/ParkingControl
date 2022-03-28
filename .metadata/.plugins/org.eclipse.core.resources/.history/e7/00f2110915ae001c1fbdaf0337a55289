@@ -1,0 +1,5 @@
+package com.example.ParkingControl.repositories;
+
+public interface ParkingSpotRepository {
+
+}
